@@ -1,0 +1,384 @@
+Last login: Tue Jun 23 11:18:12 on ttys000
+Luiss-MacBook-Pro:~ luisrego$ git init
+Reinitialized existing Git repository in /Users/luisrego/.git/
+Luiss-MacBook-Pro:~ luisrego$ cd
+Luiss-MacBook-Pro:~ luisrego$ ls
+Applications	Downloads	Movies		Public		projects
+Desktop		Dropbox		Music		backoffice
+Documents	Library		Pictures	dumps
+Luiss-MacBook-Pro:~ luisrego$ cd /
+.DS_Store                  Volumes/
+.DocumentRevisions-V100/   bin/
+.PKInstallSandboxManager/  cores/
+.Spotlight-V100/           dev/
+.Trashes/                  etc/
+.dbfseventsd               home/
+.file                      installer.failurerequests
+.fseventsd/                net/
+.vol/                      private/
+Applications/              sbin/
+Library/                   tmp/
+Network/                   usr/
+System/                    var/
+Users/
+Luiss-MacBook-Pro:~ luisrego$ cd /
+.DS_Store                  Volumes/
+.DocumentRevisions-V100/   bin/
+.PKInstallSandboxManager/  cores/
+.Spotlight-V100/           dev/
+.Trashes/                  etc/
+.dbfseventsd               home/
+.file                      installer.failurerequests
+.fseventsd/                net/
+.vol/                      private/
+Applications/              sbin/
+Library/                   tmp/
+Network/                   usr/
+System/                    var/
+Users/
+Luiss-MacBook-Pro:~ luisrego$ cd /Desktop/gitfolder
+-bash: cd: /Desktop/gitfolder: No such file or directory
+Luiss-MacBook-Pro:~ luisrego$ cd /Desktop
+-bash: cd: /Desktop: No such file or directory
+Luiss-MacBook-Pro:~ luisrego$ cd ~/Desktop
+Luiss-MacBook-Pro:Desktop luisrego$ cd gitfolder
+Luiss-MacBook-Pro:gitfolder luisrego$ git init
+Reinitialized existing Git repository in /Users/luisrego/Desktop/gitfolder/.git/
+Luiss-MacBook-Pro:gitfolder luisrego$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Lesson 2/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Luiss-MacBook-Pro:gitfolder luisrego$ $git add -A
+-bash: add: command not found
+Luiss-MacBook-Pro:gitfolder luisrego$ git add -A
+Luiss-MacBook-Pro:gitfolder luisrego$ git add -A
+Luiss-MacBook-Pro:gitfolder luisrego$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   Lesson 2/html_lesson.html
+
+Luiss-MacBook-Pro:gitfolder luisrego$ git commit -m “first version html lesson”
+error: pathspec 'version' did not match any file(s) known to git.
+error: pathspec 'html' did not match any file(s) known to git.
+error: pathspec 'lesson”' did not match any file(s) known to git.
+Luiss-MacBook-Pro:gitfolder luisrego$ git commit -m
+error: switch `m' requires a value
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup <commit>      use autosquash formatted message to fixup specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    -s, --signoff         add Signed-off-by:
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <default>   how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit hook
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+
+Luiss-MacBook-Pro:gitfolder luisrego$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   Lesson 2/html_lesson.html
+
+Luiss-MacBook-Pro:gitfolder luisrego$ git commit -m "html first version"
+[master 9a2a2d5] html first version
+ Committer: Luis Rego <luisrego@Luiss-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 12 insertions(+)
+ create mode 100644 Lesson 2/html_lesson.html
+Luiss-MacBook-Pro:gitfolder luisrego$ git config --global --edit
+Luiss-MacBook-Pro:gitfolder luisrego$ git commit -m "html first version"
+On branch master
+nothing to commit, working directory clean
+Luiss-MacBook-Pro:gitfolder luisrego$ git pull origin master
+From github.com:LRego/cs2015_luis
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+Luiss-MacBook-Pro:gitfolder luisrego$ git push origin master
+Counting objects: 8, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (8/8), 2.09 KiB | 0 bytes/s, done.
+Total 8 (delta 0), reused 0 (delta 0)
+To git@github.com:LRego/cs2015_luis.git
+   ad4045a..9a2a2d5  master -> master
+Luiss-MacBook-Pro:gitfolder luisrego$ git push origin master
+Everything up-to-date
+Luiss-MacBook-Pro:gitfolder luisrego$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   teste_2
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Luiss-MacBook-Pro:gitfolder luisrego$ git add -A
+Luiss-MacBook-Pro:gitfolder luisrego$ git commit -m ""
+Aborting commit due to empty commit message.
+Luiss-MacBook-Pro:gitfolder luisrego$ git commit -m "new version"
+[master 8b579b5] new version
+ Committer: Luis Rego <luisrego@Luiss-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 3 insertions(+)
+Luiss-MacBook-Pro:gitfolder luisrego$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 409 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To git@github.com:LRego/cs2015_luis.git
+   9a2a2d5..8b579b5  master -> master
+Luiss-MacBook-Pro:gitfolder luisrego$ git add -A
+Luiss-MacBook-Pro:gitfolder luisrego$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   Lesson 2/html_lesson.html
+
+Luiss-MacBook-Pro:gitfolder luisrego$ git commit -m "new version"
+[master d210e4c] new version
+ Committer: Luis Rego <luisrego@Luiss-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+Luiss-MacBook-Pro:gitfolder luisrego$ git push origin master
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 522 bytes | 0 bytes/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To git@github.com:LRego/cs2015_luis.git
+   8b579b5..d210e4c  master -> master
+Luiss-MacBook-Pro:gitfolder luisrego$ git add -A
+Luiss-MacBook-Pro:gitfolder luisrego$ git commit -m "new version"
+[master 8d13e1c] new version
+ Committer: Luis Rego <luisrego@Luiss-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+Luiss-MacBook-Pro:gitfolder luisrego$ git push origin master
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 565 bytes | 0 bytes/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To git@github.com:LRego/cs2015_luis.git
+   d210e4c..8d13e1c  master -> master
+Luiss-MacBook-Pro:gitfolder luisrego$ git add -A
+Luiss-MacBook-Pro:gitfolder luisrego$ git commit -m "new version"
+[master 588fd54] new version
+ Committer: Luis Rego <luisrego@Luiss-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 22 insertions(+), 19 deletions(-)
+ rewrite Lesson 2/html_lesson.html (61%)
+Luiss-MacBook-Pro:gitfolder luisrego$ git push origin master
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 506 bytes | 0 bytes/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+To git@github.com:LRego/cs2015_luis.git
+   8d13e1c..588fd54  master -> master
+Luiss-MacBook-Pro:gitfolder luisrego$ git add -A
+Luiss-MacBook-Pro:gitfolder luisrego$ git commit -m "new version"
+[master 87ffe6c] new version
+ Committer: Luis Rego <luisrego@Luiss-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 29 insertions(+)
+ create mode 100644 Lesson 2/.DS_Store
+ create mode 100644 Lesson 2/html_lesson_ex2.html
+Luiss-MacBook-Pro:gitfolder luisrego$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1014 bytes | 0 bytes/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To git@github.com:LRego/cs2015_luis.git
+   588fd54..87ffe6c  master -> master
+Luiss-MacBook-Pro:gitfolder luisrego$ git add -A
+Luiss-MacBook-Pro:gitfolder luisrego$ git commit -m "new version"
+[master 9f3b37f] new version
+ Committer: Luis Rego <luisrego@Luiss-MacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+Luiss-MacBook-Pro:gitfolder luisrego$ git push origin master
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 427 bytes | 0 bytes/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+To git@github.com:LRego/cs2015_luis.git
+   87ffe6c..9f3b37f  master -> master
+Luiss-MacBook-Pro:gitfolder luisrego$ git config --global user.name "Luis Rego"
+Luiss-MacBook-Pro:gitfolder luisrego$ git config --global user.email luisregogouveia@gmail.com
+Luiss-MacBook-Pro:gitfolder luisrego$ git push origin master
+Everything up-to-date
+Luiss-MacBook-Pro:gitfolder luisrego$ git add -A
+Luiss-MacBook-Pro:gitfolder luisrego$ git commit -m "new version"
+[master 504bb22] new version
+ 1 file changed, 41 insertions(+), 30 deletions(-)
+ rewrite Lesson 2/html_lesson_ex2.html (85%)
+Luiss-MacBook-Pro:gitfolder luisrego$ git push origin master
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 667 bytes | 0 bytes/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+To git@github.com:LRego/cs2015_luis.git
+   9f3b37f..504bb22  master -> master
+Luiss-MacBook-Pro:gitfolder luisrego$ git add -A
+Luiss-MacBook-Pro:gitfolder luisrego$ git commit -m "new version"
+[master 8b6cab3] new version
+ 2 files changed, 30 insertions(+), 1 deletion(-)
+ create mode 100644 Lesson 2/main.css
+Luiss-MacBook-Pro:gitfolder luisrego$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 808 bytes | 0 bytes/s, done.
+Total 5 (delta 1), reused 0 (delta 0)
+To git@github.com:LRego/cs2015_luis.git
+   504bb22..8b6cab3  master -> master
+Luiss-MacBook-Pro:gitfolder luisrego$ git add -A
+Luiss-MacBook-Pro:gitfolder luisrego$ git commit -m "new version"
+[master 23fc46a] new version
+ 2 files changed, 12 insertions(+), 2 deletions(-)
+Luiss-MacBook-Pro:gitfolder luisrego$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 623 bytes | 0 bytes/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+To git@github.com:LRego/cs2015_luis.git
+   8b6cab3..23fc46a  master -> master
+Luiss-MacBook-Pro:gitfolder luisrego$ git add -A
+Luiss-MacBook-Pro:gitfolder luisrego$ git commit -m "new version"
+[master fb50643] new version
+ 2 files changed, 4 insertions(+), 6 deletions(-)
+Luiss-MacBook-Pro:gitfolder luisrego$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 583 bytes | 0 bytes/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+To git@github.com:LRego/cs2015_luis.git
+   23fc46a..fb50643  master -> master
+Luiss-MacBook-Pro:gitfolder luisrego$ git add -A
+Luiss-MacBook-Pro:gitfolder luisrego$ git commit -m "new version"
+On branch master
+nothing to commit, working directory clean
+Luiss-MacBook-Pro:gitfolder luisrego$ git push origin master
+Everything up-to-date
+Luiss-MacBook-Pro:gitfolder luisrego$
