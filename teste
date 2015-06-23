@@ -6,7 +6,7 @@ Initialized empty Git repository in /private/tmp/cs2015/.git/
 
 2. Edit File
 
-3. Add them to the Stage(stage them)
+//3. Add them to the Stage(stage them)
 
 $git add -A
 
@@ -16,4 +16,9 @@ $git commit -m “name of the file”
 
 CLI - Command Line Interface
 
+//file list
 ls
+
+
+//Log do git
+git log
