@@ -17,3 +17,6 @@ $git commit -m “name of the file”
 CLI - Command Line Interface
 
 ls
+
+//enviar ficheiros
+git push origin master
