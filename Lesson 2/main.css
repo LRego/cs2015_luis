@@ -1,6 +1,5 @@
 body{
     margin: 60px;
-    font-family: helvetica;
     font-family: 'Open Sans', sans-serif; }
 
 label{
@@ -27,3 +26,12 @@ button:hover {
 
 div {
     margin-bottom: 20px; }
+
+/*
+div > label {
+    margin-bottom: 10px;
+}
+
+
+div > input {
+    margin-bottom: 20px; }*/
