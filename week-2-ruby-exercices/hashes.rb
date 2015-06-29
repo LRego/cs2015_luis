@@ -38,7 +38,7 @@ def sentece_language(language)
     #     end
     # end
 
-    puts "In #{languages[language]}, #{dictionary[language][:one][:two][:three]}"
+    puts "In #{languages[language]}, #{dictionary[language][:one]}"
 end
 
 sentece_language(:de)
