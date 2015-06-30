@@ -8,4 +8,4 @@
 
 list = ["Hello", "World"]
 
-puts list.join(" ")
+puts list.join(" ") 
