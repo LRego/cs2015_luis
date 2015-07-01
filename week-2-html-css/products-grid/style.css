@@ -6,7 +6,9 @@ ul {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    padding: 0; }
+    padding: 0;
+    /*justify-content: space-between; With space-between I don't need to use padding in each element, justify with the space needed. I can remove padding from li*/
+}
 
 p {
     margin: 0;
