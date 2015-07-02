@@ -1,24 +1,6 @@
+require_relative "transaction"
 # This is how you define your own custom exception classes
 class DepositError < StandardError
-end
-
-class Transaction
-  def initialize(amount)
-    # Initialize amount and date of transaction
-    @amount = amount
-    @time = Time.now
-    # @time = Time.now.strftime("on %d/%m/%y at %l:%M:%S:%L %P")
-  end
-
-def amount
-    @amount
-end
-
-  def to_s
-    # Nicely print transaction infos using Time#strftime.
-    # "#{@amount} #{@time}\n"
-    "#{@amount} #{@time.strftime("on %d/%m/%y at %l:%M:%S:%L %P")}\n"
-  end
 end
 
 class BankAccount
@@ -113,10 +95,10 @@ end
 
 account = BankAccount.new("Bruce Lee", "FR14-2004-1010-0505-0001-3M02-606", 200, "brucelit")
 
-puts account.deposit(300)
-puts account.deposit(400)
-puts account.withdraw(200)
-puts account.withdraw(200)
+account.deposit(300)
+account.deposit(400)
+account.withdraw(200)
+account.withdraw(200)
 sleep 2
 puts account.withdraw(200)
 puts account.withdraw(200)
