@@ -2,3 +2,9 @@
 <p>
     <%= @post.body %>
 </p>
+
+<ul>
+    <% @comments.each do |comment| %>
+        <li><%= comment.author %></li>
+    <% end %>
+</ul>

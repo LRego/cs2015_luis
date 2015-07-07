@@ -1,0 +1,5 @@
+<ul>
+    <% @products.each do |product| %>
+        <li><span><%= product.name %></span> - <%= product.price %> - <%= product.brand %></li>
+    <% end %>
+</ul>
