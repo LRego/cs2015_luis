@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="/main.css">
+        <title></title>
+    </head>
+    <body>
+        <% if @bob_response %>
+            <p class="color-green" style="margin-left: 20px">
+                <%= @bob_response %>
+            </p>
+        <% end %>
+        <form action="/" method="GET">
+            <input name="name">
+            <button>Submit</button>
+        </form>
+    </body>
+</html>

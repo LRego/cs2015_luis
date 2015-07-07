@@ -173,3 +173,99 @@ em {
 a {
     cursor: pointer;
 }
+
+.top-search-bar {
+    background: #f1f1f1;
+    height: 59px;
+    left: 0;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+input {
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 6;
+    left: 0px;
+    outline: none;
+    cursor: text;
+    background-color: #fff;
+}
+
+.seach-bar-input {
+    border: 1px solid #d9d9d9;
+    border-top-color: #c0c0c0;
+    height: 28px;
+    vertical-align: top;
+    max-width: 600px;
+    width: 100%;
+    height: 28px;
+    position:relative;
+}
+
+.relative {
+    position: relative;
+}
+
+.google-logo {
+    visibility: visible;
+    padding-left: 13px;
+    padding-right: 12px;
+}
+
+.google-logo a {
+    display: block;
+    height: 37px;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    width: 95px;
+}
+
+.google-logo img {
+    border: 0;
+    left: 0;
+    position: absolute;
+    top: -41px;
+    width: 167px;
+    height: 373px;
+}
+
+.search-button button {
+    border: 1px solid transparent;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    height: 30px;
+    margin: 0;
+    outline: none;
+    width: 60px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #4285f4;
+    background: -webkit-linear-gradient(top,#4387fd,#4683ea);
+    background: linear-gradient(top,#4387fd,#4683ea);
+}
+
+.search-button button:hover {
+    background-color: #357ae8;
+    background-image: -webkit-linear-gradient(top,#4d90fe,#357ae8);
+    background-image: linear-gradient(top,#4d90fe,#357ae8);
+    border: 1px solid #2f5bb7;
+}
+
+.search-icon {
+    background: url(/images/nav_logo195.png) no-repeat -113px -59px;
+    color: transparent;
+    display: inline-block;
+    height: 18px;
+    margin: 0 auto 0px;
+    width: 18px;
+}
