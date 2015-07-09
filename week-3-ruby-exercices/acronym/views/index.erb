@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <form action="/" method="GET">
+            <!--  Devemos ir buscar o parametro 'name', tava a ir buscar o parametro diferente sentence -->
+            <input name="name">
+            <button>Submit</button>
+        </form>
+        <% if @text %>
+            <p class="color-green" style="margin-left: 20px">
+                <%= @text %>
+            </p>
+        <% end %>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <ul>
+                <% @products.each do |product| %>
+                    <li><span><%= product.name %></span> - <%= product.price %> - <%= product.brand %></li>
+                    <div class="">
+                        <a class="button" href="remove/<%= product.id %>">Remove Product </a> -
+                        <a class="button" href="show/<%= product.id %>">Show Details </a> -
+                        <a class="button" href="edit/<%= product.id %>">Edit Product </a>
+                    </div>
+                <% end %>
+            </ul>
+        </div>
+    </div>
+    <form action="/new" method="POST">
+        <div class="col-md-12">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                            <label for="name">Name</label>
+                            <input id="name" class="full-width" type="text" name="name" placeholder="name of the product">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <label for="price">Price</label></label>
+                            <input id="price" class="full-width" type="text" name="price" placeholder="price of the product">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <label for="brand">Brand</label>
+                            <input id="brand" class="full-width" type="text" name="brand" placeholder="brand of the product">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <button type="submit">+ Add Product</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
