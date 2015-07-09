@@ -68,7 +68,6 @@ post '/update/:id' do
     product = products.find do |product|
         product.id == params[:id].to_i
     end
-    puts params
     product.change_name(params[:name])
     redirect "/show/#{params[:id]}"
 end
