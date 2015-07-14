@@ -1,4 +1,6 @@
 require 'sinatra'
+require 'date'
+require 'time'
 
 class Party
     attr_reader :id, :name, :description, :date_time
@@ -22,13 +24,28 @@ class Party
 end
 
 parties = [
-    Party.new(0 ,"Helo", "kksks","kdkdk"),
-    Party.new(1, "Helo", "kddkdjdkjdk","kdkdk")
+    Party.new(0 ,"Party 1", "bla bla", DateTime.new(2016, 2, 3, 4, 5, 6)),
+    Party.new(1, "Party 2", "cccccc", DateTime.new(2013, 2, 3, 4, 5, 6)),
+    Party.new(3, "Party 3", "ddddddddd", DateTime.new(2000, 2, 3, 4, 5, 6)),
+    Party.new(4, "Party 4", "dddddddddssssss", DateTime.new(2017, 2, 3, 4, 5, 6))
 ]
 
 # list of all parties
 get '/' do
-    @parties = parties
+    @parties = parties.sort_by do |party|
+        party.date_time
+    end
+    @parties = parties.reject do |party| #para não aparecer no search reject! as parties que já passaram.
+        party.date_time < DateTime.now
+    end
+    if params.key?('search') && params[:search] != ""
+        @parties = parties.select do |party|
+            party.name.downcase.include?(params[:search].downcase) || party.description.downcase.include?(params[:search].downcase)
+        end
+    end
+    if params[:sort] == 'descend'
+        @parties = @parties.reverse
+    end
     erb :index
 end
 
