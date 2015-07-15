@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form action="/new" method="post">
+                <div class="col-md-6">
+                    <div class="col-md-4">
+                        <input type="text" name="title" placeholder="Insert your new task">
+                    </div>
+                    <div class="col-md-6">
+                        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-plus"></i>Add New Task</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-4">
+                <div class="col-md-12">
+                    <span class="h2">Complete Todos</span>
+                </div>
+                <div class="col-md-12">
+                    <ul class="list-group">
+                        <% @complete_todos.each do |todo| %>
+
+                                <li class="list-group-item list-group-item-success">
+                                    <%= todo.title %>
+                                    <i class="glyphicon glyphicon-ok pull-right"></i>
+                                </li>
+
+                        <% end %>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="col-md-12">
+                    <span class="h2">Incomplete Todos</span>
+                </div>
+
+
+                <div class="col-xs-12">
+                    <ul class="list-group">
+                        <% @incomplete_todos.each do |todo| %>
+                            <form action="/remove/<%= todo.id %>" method="get">
+                                <li class="list-group-item list-group-item-danger">
+                                    <%= todo.title %>
+                                    <button class="glyphicon glyphicon-remove pull-right" type="submit"></button>
+                                    - <span> <%= todo.complete %></span>
+                                    <a href="/todo/<%= todo.id %>/toggle">Toggle</a>
+                                </li>
+                            </form>
+                        <% end %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

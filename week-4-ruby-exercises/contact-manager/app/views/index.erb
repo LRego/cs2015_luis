@@ -1,69 +1,91 @@
-<% @contacts.each do |contact| %>
-    <form action="/remove/<%= contact.id %>" method="get">
-        <ul>
-            <li>
-                <label for="">First Name</label>
-                <%= contact.first_name %>
-            </li>
-            <li>
-                <label for="">Last Name</label>
-                <%= contact.last_name %>
-            </li>
-            <li>
-                <label for="">Email</label>
-                <%= contact.email %>
-            </li>
-            <li>
-                <label for="">Phone Number</label>
-                <%= contact.phone_number %>
-            </li>
-            <li>
-                <label for="">Address</label>
-                <%= contact.address %>
-            </li>
-            <div class="">
-                <a class="button" href="edit/<%= contact.id %>">Edit Contact </a>
-            </div>
-            <div class="">
-                <button type="submit">Remove</button>
-            </div>
-        </ul>
-    </form>
-<% end %>
-
-
-<a href="/?sort=ascend">Ascend</a>
-<a href="/?sort=descend">Descend</a>
-
-<!-- <form action="/" method="get">
-    <input type="submit" name="sort" value="ascend">
-    <input type="submit" name="sort" value="descend">
-</form> -->
-
-<form action="/new" method="post">
-    <ul>
-        <li>
-            <label for="">First Name</label>
-            <input type="text" name="first_name" >
-        </li>
-        <li>
-            <label for="">Last Name</label>
-            <input type="text" name="last_name" >
-        </li>
-        <li>
-            <label for="">Email</label>
-            <input type="text" name="email" >
-        </li>
-        <li>
-            <label for="">Phone Number</label>
-            <input type="text" name="phone_number">
-        </li>
-        <li>
-            <label for="">Address</label>
-            <input type="text" name="address">
-        </li>
-    </ul>
-    <div class="">
-        <button type="submit" name="button">Submit</button>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form action="/" method="get">
+                <div class="col-md-6">
+                    <input type="text" name="search" placeholder="search contact">
+                    <button type="submit">Find</button>
+                </div>
+            </form>
+        </div>
     </div>
-</form>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <% @contacts.each do |contact| %>
+                <form action="/remove/<%= contact.id %>" method="get">
+                    <ul>
+                        <li>
+                            <label for="">First Name</label>
+                            <%= contact.first_name %>
+                        </li>
+                        <li>
+                            <label for="">Last Name</label>
+                            <%= contact.last_name %>
+                        </li>
+                        <li>
+                            <label for="">Email</label>
+                            <%= contact.email %>
+                        </li>
+                        <li>
+                            <label for="">Phone Number</label>
+                            <%= contact.phone_number %>
+                        </li>
+                        <li>
+                            <label for="">Address</label>
+                            <%= contact.address %>
+                        </li>
+                        <div class="">
+                            <a class="button" href="edit/<%= contact.id %>">Edit Contact </a>
+                        </div>
+                        <div class="">
+                            <button type="submit">Remove</button>
+                        </div>
+                    </ul>
+                </form>
+            <% end %>
+        </div>
+        <div class="col-md-4">
+            <form action="/" method="get">
+                <input type="submit" name="sort" value="ascend">
+                <input type="submit" name="sort" value="descend">
+            </form>
+        </div>
+        <div class="col-md-4">
+            <form action="/new" method="post">
+                <ul>
+                    <li>
+                        <label for="">First Name</label>
+                        <input type="text" name="first_name" >
+                    </li>
+                    <li>
+                        <label for="">Last Name</label>
+                        <input type="text" name="last_name" >
+                    </li>
+                    <li>
+                        <label for="">Email</label>
+                        <input type="text" name="email" >
+                    </li>
+                    <li>
+                        <label for="">Phone Number</label>
+                        <input type="text" name="phone_number">
+                    </li>
+                    <li>
+                        <label for="">Address</label>
+                        <input type="text" name="address">
+                    </li>
+                </ul>
+                <div class="">
+                    <button type="submit" name="button">Submit</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- <a href="/?order=ascend">Ascend</a>
+<a href="/?order=descend">Descend</a> -->
