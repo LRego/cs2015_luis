@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form action="/products/create" method="post">
+                <ul>
+                    <li><input type="text" name="name" placeholder="product name"></li>
+                    <li><textarea name="description" rows="4" cols="40"></textarea></li>
+                    <li>
+
+                        <select class="form-control">
+                            <option value="category_id"></option>
+                        </select>
+                    </li>
+                    <li><input type="text" name="price" placeholder="product price"></li>
+                </ul>
+                <div class="col-md-6">
+                    <button type="submit">create product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

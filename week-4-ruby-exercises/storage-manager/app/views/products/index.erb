@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Storage Manager</h1>
+            <ul>
+                <% @products.each do |product| %>
+                <li>
+                    <div class="product-name">
+                        <span><%= product.name %></span>
+                        <span><%= product.price %></span>
+                    </div>
+                    <div class="product_category">
+                        <span><%= product.category_id %></span>
+                    </div>
+                    <div class="product_description">
+                        <textarea name="description" rows="4" cols="40"><%= product.description %></textarea>
+                    </div>
+                </li>
+                <% end %>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <a href="/products/new">Create Product</a>
+        </div>
+    </div>
+</div>
