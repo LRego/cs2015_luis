@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="application.js"></script>
+  </head>
+  <body ng-app="storeApp">
+    <h1>Store App</h1>
+    <div store-catalog></div>
+    <div store-cart></div>
+
+    <script type="text/ng-template" id="cart.html" >
+      <div class="store-cart">
+        <h2>Cart</h2>
+        <ul>
+          <li ng-repeat="item in ctrl.items">
+            {{ item.name}} {{ item.price}}
+            <button ng-click="ctrl.remove(item)">
+              Remove
+            </button>
+          </li>
+          <div >
+            Total: {{ ctrl.store.getCartTotal() | currency:ctrl.currency:2 }}
+          </div>
+        </ul>
+      </div>
+    </script>
+    <script type="text/ng-template" id="catalog.html">
+      <div class="store-catalog">
+        <h2>
+          {{ ctrl.title }}
+        </h2>
+        <div>
+          <label>Search products:</label>
+          <input type="text" ng-model="ctrl.search">
+        </div>
+        <select ng-model="ctrl.currency">
+          <option value="$">Dollar</option>
+          <option value="€">Euro</option>
+        </select>
+        <ul>
+          <li ng-repeat="product in ctrl.products | filter:{name: ctrl.search} ">
+            {{ product.name }}
+            {{ product.price | currency:ctrl.currency:2 }}
+            <button ng-click="ctrl.addToCart(product)">
+              Add to Cart
+            </button>
+          </li>
+        </ul>
+      </div>
+    </script>
+  </body>
+</html>

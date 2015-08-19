@@ -3,9 +3,25 @@
 <ul>
   <% @posts.each do |post| %>
     <li>
-      <a href="posts/<%= post.id %>">
-        <%= post.title %>
-      </a>
+        <a href="posts/<%= post.id %>">
+            <%= post.title %>
+        </a>
+        <div class="">
+            <%= link_to "Edit", edit_post_path(post) %>
+        </div>
+        <div class="">
+            <%= link_to "Show", post_path(post) %>
+        </div>
+        <div class="">
+
+            <% if can? :destroy, post %>
+
+                <%= link_to "Remove", post_path(post), method: :delete %>
+            <% end %>
+        </div>
     </li>
   <% end %>
 </ul>
+<div class="">
+    <%= link_to "New", new_post_path %>
+</div>
