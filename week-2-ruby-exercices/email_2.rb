@@ -14,7 +14,6 @@ class Email
     def subject
         @subject
     end
-
 end
 
 email = Email.new("Homework this week", {:date => "2014-12-01", :from => "Ferdous"})
